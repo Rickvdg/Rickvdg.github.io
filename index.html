@@ -2,87 +2,28 @@
 <html>
 <head>
     <title>Welkom</title>
-    <link rel="stylesheet" type="text/css" href="site.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/site.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+
     <style>
-        body {
-            font-family: 'Open Sans';
-        }
-
-        .info {
-            background-color: #ffffff;
-            border-radius: 1000px;
-            position: relative;
-            left: -50%;
-            margin-top: -50%;
-            min-height: 7rem;
-            min-width: 7rem;
-            white-space: nowrap;
-            display: inline-flex;
-            overflow: hidden;
-        }
-
-        .picture {
-            position: relative;
-            background: url(avatar.png);
-            background-size: contain;
-            border-radius: 50%;
-            height: 6rem;
-            width: 6rem;
-            margin-top: 0.5rem;
-            margin-left: 0.5rem;
-        }
-
-        .wrapper {
-            position: fixed;
-            z-index: 1;
-            top: 50%;
-            left: 50%;
-        }
-
-        .text {
-            position: relative;
-            height: 100%;
-            max-width: 0;
-            color: black;
-            transition: ease 3s 1s;
-        }
-
-        .window1test {
+        .parallax-inside-border::after {
+            content: "";
+            position: absolute;
+            background-color: deepskyblue;
+            bottom: 0;
             width: 100%;
-            height: 100vh;
-            background-color: lightgray;
-        }
-
-        .name, .title {
-            margin-left: 1rem;
-            margin-right: 2rem;
-        }
-
-        .name {
-            font-weight: bold;
-            font-size: 3rem;
-        }
-
-        .title {
-            font-size: 2rem;
-        }
-
-        .window2 {
-            position: relative;
-            background-color: rgba(240, 240, 240, 1);
-            height: 100vh;
-            width: 100%;
+            height: 10%;
             z-index: 2;
         }
 
-        .window2::before {
-            /*content: '';*/
-            width: 0;
-            height: 0;
+        .parallax-inside-border::before {
+            content: "";
+            position: relative;
+            top: -50%;
+            z-index: 2;
             border-top: 50px solid transparent;
-            border-left: 50px solid rgba(240, 240, 240, 1);
-            border-right: 50px solid rgba(240, 240, 240, 1);
+            border-left: 500px solid lightgray;
+            border-right: 500px solid lightgray;
         }
     </style>
 </head>
@@ -97,13 +38,20 @@
                 </div>
             </div>
         </div>
+        <div id="particles-js"></div>
     </div>
+
+
     <div class="window2">
-
     </div>
 
-	<script src="jquery-3.3.1.min.js"></script>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/particles.js"></script>
     <script>
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', 'assets/particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
         $(document).ready(function () {
             $(".text").css("max-width", "450px");
         });

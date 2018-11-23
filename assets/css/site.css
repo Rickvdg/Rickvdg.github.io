@@ -1,0 +1,95 @@
+﻿.window1 {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    transition: all 0.5s linear 0s;
+    position: fixed;
+    /*-webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;*/
+}
+
+.info {
+    background-color: #ffffff;
+    border-radius: 1000px;
+    position: relative;
+    left: -50%;
+    transform: translateY(-50%);
+    min-height: 7rem;
+    min-width: 7rem;
+    white-space: nowrap;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.picture {
+    position: relative;
+    background: url(../img/avatar2.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+}
+
+.text {
+    position: relative;
+    height: 100%;
+    max-width: 0;
+    color: black;
+    transition: ease-out 3s 1s;
+}
+
+.window1test {
+    width: 100%;
+    height: 100vh;
+    background-color: lightgray;
+}
+
+.name, .title {
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.window2 {
+    position: relative;
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    top: 100vh;
+    box-shadow: 0 0px 25px rgba(0,0,0,0.5);
+}
+
+.window2::before {
+    /*content: '';*/
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 50px solid rgba(240, 240, 240, 1);
+    border-right: 50px solid rgba(240, 240, 240, 1);
+}
+
+body {
+    font-family: 'Open Sans', "Arial Black";
+}
