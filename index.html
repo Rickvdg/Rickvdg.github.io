@@ -4,10 +4,39 @@
     <title>Welkom</title>
     <link rel="stylesheet" type="text/css" href="assets/css/site.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Varela+Round" rel="stylesheet">
+
+    <style>
+        .textv2 {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .textv2 .name {
+            color: white;
+            font-size: 5rem;
+            font-family: "Varela Round";
+        }
+
+        .textv2 .title {
+            color: white;
+            font-size: 4rem;
+            font-family: "Lobster";
+            font-weight: 400;
+        }
+
+        h1 {
+            font-family: "Varela Round";
+            background: -webkit-linear-gradient(-45deg, rgba(30,202,255,1), rgba(104,107,255,1), rgba(217,86,234,1), rgba(247,136,66,1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body style="margin: 0;">
     <div class="window1">
-        <div class="wrapper">
+        <!--<div class="wrapper">
             <div class="info">
                 <div class="picture"></div>
                 <div class="text">
@@ -16,28 +45,44 @@
                 </div>
             </div>
         </div>
-        <div id="particles-js"></div>
+        <div id="particles-js"></div>-->
+        <div class="wrapper">
+            <div class="textv2">
+                <div class="name">Rick van der Gun</div>
+                <div class="title">Fullstack developer</div>
+            </div>
+        </div>
     </div>
 
 
     <div class="window2">
+        <div style="padding: 30px;">
+            <div>
+                <h1 style="font-size: 6rem; margin: auto;">About me</h1>
+            </div>
+            <div style="border-radius: 10px; background-color: deepskyblue; padding: 20px;">Ewa niffo</div>
+        </div>
     </div>
 
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/particles.js"></script>
+    <!--<script src="assets/js/particles.js"></script>-->
     <script>
-        particlesJS.load('particles-js', 'assets/particles.json');
+        var frontcoloursDisabled = false;
+
+        //particlesJS.load('particles-js', 'assets/particles.json');
         $(document).ready(function () {
             $(".text").css("max-width", "450px");
         });
-        $(document).mousemove(function (event) {
-            let window1 = $(".window1");
-            let width = parseInt(event.pageX) / parseInt(window1.width()) * 100;
-            let height = parseInt(event.pageY) / parseInt(window1.height()) * 100;
-            if (width > 100) { width = 100; }
-            if (height > 100) { height = 100; }
-            window1.css("background-position", "" + width + "% " + height + "%");
-        });
+        if (!frontcoloursDisabled) {
+            $(document).mousemove(function (event) {
+                let window1 = $(".window1");
+                let width = parseInt(event.pageX) / parseInt(window1.width()) * 100;
+                let height = parseInt(event.pageY) / parseInt(window1.height()) * 100;
+                if (width > 100) { width = 100; }
+                if (height > 100) { height = 100; }
+                window1.css("background-position", "" + width + "% " + height + "%");
+            });
+        }
     </script>
 </body>
 </html>

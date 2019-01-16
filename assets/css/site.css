@@ -1,4 +1,25 @@
-﻿.window1 {
+﻿@font-face {
+    font-family: "Open Sans", sans-serif;
+    src: url('/assets/fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+    src: url('/assets/fonts/Open_Sans/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Lobster', cursive;
+    src: url('/assets/fonts/Lobster/Lobster-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Varela Round', sans-serif;
+    src: url('/assets/fonts/Valera_Round/VarelaRound-Regular.ttf');
+}
+
+.window1 {
     width: 100%;
     height: 100vh;
     color: #fff;
@@ -61,7 +82,7 @@
     background-color: lightgray;
 }
 
-.name, .title {
+.text .name,.text .title {
     margin-left: 1rem;
     margin-right: 2rem;
 }
