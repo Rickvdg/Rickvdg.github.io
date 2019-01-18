@@ -99,22 +99,42 @@
 .window2 {
     position: relative;
     background-color: whitesmoke;
-    height: 100vh;
+    /*height: 100vh;*/
     width: 100%;
     z-index: 2;
     top: 100vh;
-    box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
-.window2::before {
-    /*content: '';*/
+.section {
+    position: relative;
+    background-color: whitesmoke;
+    width: 100%;
+    z-index: 2;
+}
+
+.between {
+    height: 20vh;
+    background-color: deeppink;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.window-border-top {
+    position: absolute;
     width: 0;
     height: 0;
+    bottom: 100%;
     border-top: 50px solid transparent;
-    border-left: 50px solid rgba(240, 240, 240, 1);
-    border-right: 50px solid rgba(240, 240, 240, 1);
+    border-right: 0 solid whitesmoke;
 }
 
 body {
     font-family: 'Open Sans', "Arial Black", sans-serif;
+}
+
+html {
+    overflow-x: hidden;
 }
