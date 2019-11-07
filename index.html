@@ -5,26 +5,27 @@
     <link rel="stylesheet" type="text/css" href="assets/css/site.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lobster|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <style>
         .textv2 {
             text-align: center;
             vertical-align: middle;
-            width: 50%;
-            top: 40%;
-            position: absolute;
+            position: relative;
+            margin-top: 50vh;
+            transform: translateY(-50%);
         }
 
         .textv2 .name {
             color: white;
-            font-size: 5rem;
+            font-size: 8rem;
             font-family: "Varela Round";
             font-weight: 400;
         }
 
         .textv2 .title {
             color: white;
-            font-size: 4rem;
+            font-size: 6rem;
             font-family: "Lobster";
             font-weight: 400;
         }
@@ -60,9 +61,14 @@
             </div>
         </div>
         <div id="particles-js"></div>-->
-        <div class="textv2">
-            <div class="name">Rick van der Gun</div>
-            <div class="title">Fullstack developer</div>
+        <div class="container-fluid">
+            <div class="col-md-6">
+                <div class="textv2">
+                    <div class="name">Rick van der Gun</div>
+                    <div class="title">Fullstack developer</div>
+                </div>
+            </div>
+            <div class="col-md-6"></div>
         </div>
         <!--<img class="avatar" src="assets/img/avatar3.jpg" />-->
     </div>
