@@ -48,6 +48,7 @@
     </style>
 </head>
 <body style="margin: 0;">
+    <div id="particles-js"></div>
     <div class="window1">
         <!--<div class="wrapper">
             <div class="info">
@@ -63,11 +64,11 @@
             <div class="name">Rick van der Gun</div>
             <div class="title">Fullstack developer</div>
         </div>
-        <img class="avatar" src="assets/img/avatar3.jpg" />
+        <!--<img class="avatar" src="assets/img/avatar3.jpg" />-->
     </div>
 
 
-    <div class="window2">
+    <!--<div class="window2">
         <div id="about" class="section">
             <div class="window-border-top"></div>
             <div style="padding: 30px;">
@@ -91,19 +92,21 @@
             </div>
             <div class="window-border-top" style="transform: rotate(180deg); top: 100%;"></div>
         </div>
-    </div>
+    </div>-->
 
     
 
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
-    <!--<script src="assets/js/particles.js"></script>-->
+    <script src="assets/js/particles.js"></script>
     <script>
-        var frontcoloursDisabled = true;
+        var frontcoloursDisabled = false;
 
-        //particlesJS.load('particles-js', 'assets/particles.json');
         $(document).ready(function () {
             $(".text").css("max-width", "450px");
             $(".window-border-top").css("border-right", "" + window.innerWidth + "px solid whitesmoke");
+            particlesJS.load('particles-js', 'assets/particles.json', function() {
+                console.log('callback - particles.js config loaded');
+            });
         });
         if (!frontcoloursDisabled) {
             $(document).mousemove(function (event) {
