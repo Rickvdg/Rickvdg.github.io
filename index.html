@@ -112,12 +112,12 @@
             $(".window-border-top").css("border-right", "" + window.innerWidth + "px solid whitesmoke");
             particlesJS.load('particles-js', 'assets/particles.json', function() {
                 console.log('callback - particles.js config loaded');
-                $('.particles-js-canvas-el').attr('width', $(window).outerWidth);
+                $('.particles-js-canvas-el').attr('width', $(window).outerWidth());
                 $('.particles-js-canvas-el').attr('height', $(window).outerHeight());
             });
 
             $(window).resize(function () {
-                $('.particles-js-canvas-el').attr('width', $(window).outerWidth);
+                $('.particles-js-canvas-el').attr('width', $(window).outerWidth());
                 $('.particles-js-canvas-el').attr('height', $(window).outerHeight());
             });
         });
