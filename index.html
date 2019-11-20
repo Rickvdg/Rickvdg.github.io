@@ -38,6 +38,10 @@
             display: inline-block;
         }
 
+        h2 {
+            text-align: center;
+        }
+
         .avatar {
             /*background: url('assets/img/avatar3.jpg');*/
             position: absolute;
@@ -46,22 +50,50 @@
             height: 100%;
             width: 50%;
         }
+
+        .circle {
+            height: 250px;
+            width: 250px;
+            line-height: 50px;
+            border-radius: 50%;
+            background: white;
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            margin-top: 120px;
+            overflow: hidden;
+        }
+
+        .circle-md {
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+        }
+
+        .circle > .glyphicon {
+            background: -webkit-linear-gradient(-45deg, rgba(30,202,255,1), rgba(104,107,255,1), rgba(217,86,234,1), rgba(247,136,66,1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .circle > .glyphicon-cd, .circle > .glyphicon-cutlery {
+            font-size: 180px;
+            width: 200px;
+            text-align: center;
+            padding-right: 10px;
+            margin-top: 10px;
+        }
+
+        .circle > .glyphicon-user {
+            font-size: 250px;
+            text-align: center;
+            margin: 10px auto 0;
+        }
     </style>
 </head>
 <body style="margin: 0;">
-    <div id="particles-js" style="position:absolute; z-index: 1; top: 0; bottom: 0; left: 0; width: 100%;"></div>
-    <div class="window1">
-        <!--<div class="wrapper">
-            <div class="info">
-                <div class="picture"></div>
-                <div class="text">
-                    <div class="name">Rick van der Gun</div>
-                    <div class="title">Fullstack developer</div>
-                </div>
-            </div>
-        </div>
-        <div id="particles-js"></div>-->
-        <div class="container-fluid">
+    <div class="window1" style="overflow-y: auto;">
+        <div class="container-fluid" style="height: 95vh;">
             <div class="col-md-6">
                 <div class="textv2">
                     <div class="name">Rick van der Gun</div>
@@ -70,7 +102,51 @@
             </div>
             <div class="col-md-6"></div>
         </div>
-        <!--<img class="avatar" src="assets/img/avatar3.jpg" />-->
+
+        <div style="background: rgba(245, 245, 245, 0.5);">
+            <div class="splitter-window">
+                <div class="window-border-top"></div>
+                <div class="content">
+                    <h1 style="font-size: 72px; font-weight: bold;">About me</h1>
+                </div>
+                <div class="window-border-bottom"></div>
+            </div>
+
+            <div style="min-height: 500px">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span class="circle circle-md" style="margin-top: 170px;">
+                                <span class="glyphicon glyphicon-cd"></span>
+                            </span>
+                            <h2>Muziek</h2>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="circle circle-lg">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </span>
+                            <h2>Programmeren</h2>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="circle circle-md">
+                                <span class="glyphicon glyphicon-cutlery"></span>
+                            </span>
+                            <h2>Koken</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="splitter-window" style="height: 100px">
+                <div class="window-border-top"></div>
+                <div class="content">
+                
+                </div>
+                <div class="window-border-bottom"></div>
+            </div>
+        </div>
+
+        <div id="particles-js" style="position:absolute; z-index: 1; top: 0; bottom: 0; left: 0; width: 100%; pointer-events: none;"></div>
     </div>
 
 
@@ -109,7 +185,8 @@
 
         $(document).ready(function () {
             $(".text").css("max-width", "450px");
-            $(".window-border-top").css("border-right", "" + window.innerWidth + "px solid whitesmoke");
+            $(".window-border-top").css("border-right-width", "" + window.innerWidth + "px");
+            $(".window-border-bottom").css("border-left-width", "" + window.innerWidth + "px");
             particlesJS.load('particles-js', 'assets/particles.json', function() {
                 console.log('callback - particles.js config loaded');
                 $('.particles-js-canvas-el').attr('width', $(window).outerWidth());

@@ -128,7 +128,35 @@
     height: 0;
     bottom: 100%;
     border-top: 50px solid transparent;
-    border-right: 0 solid whitesmoke;
+    border-right: 0 solid white;
+}
+
+.window-border-bottom {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 100%;
+    border-bottom: 50px solid transparent;
+    border-left: 0 solid white;
+}
+
+.splitter-window {
+    background: white;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.splitter-window > .content {
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Varela Round" !important;
 }
 
 body {
